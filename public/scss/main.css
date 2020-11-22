@@ -1,0 +1,421 @@
+@import url("https://fonts.googleapis.com/css2?family=Piazzolla:wght@300;400&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Piazzolla", serif;
+}
+
+:root {
+  --main-bg: #dff9fb;
+  --main-color: #130f40;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.row {
+  margin: 0;
+}
+
+header.nav-menu {
+  background-color: var(--main-color);
+  font-size: 1.6rem;
+  color: #fff;
+}
+
+header.nav-menu nav {
+  background-color: var(--main-color);
+  padding: 2rem 0rem;
+}
+
+header.nav-menu nav li {
+  margin-left: 1rem;
+}
+
+header.nav-menu nav li a {
+  color: #fff;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+header.nav-menu nav li a:hover {
+  color: #f9ca24;
+}
+
+header.nav-menu nav .navbar-brand {
+  font-size: 2.3rem;
+  -webkit-transition: all linear;
+  transition: all linear;
+  color: white;
+  -webkit-animation: colr 5s linear infinite;
+          animation: colr 5s linear infinite;
+}
+
+@-webkit-keyframes colr {
+  0% {
+    color: yellow;
+  }
+  25% {
+    color: red;
+  }
+  50% {
+    color: #b4b4b4;
+  }
+  75% {
+    color: #68e768;
+  }
+  100% {
+    color: #e056fd;
+  }
+}
+
+@keyframes colr {
+  0% {
+    color: yellow;
+  }
+  25% {
+    color: red;
+  }
+  50% {
+    color: #b4b4b4;
+  }
+  75% {
+    color: #68e768;
+  }
+  100% {
+    color: #e056fd;
+  }
+}
+
+header.nav-menu nav .navbar-brand .fa-snowflake {
+  -webkit-transition: all linear;
+  transition: all linear;
+  -webkit-animation: rotate 2s linear infinite;
+          animation: rotate 2s linear infinite;
+  color: #c7ecee;
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.navbar-toggler-icons {
+  font-size: 2rem;
+  color: #fff;
+}
+
+section.hero .hero_left {
+  height: 50rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+section.hero .hero_left p {
+  font-size: 2rem;
+}
+
+section.hero .hero_left h1 {
+  font-size: 4rem;
+  margin: 0rem 0rem 4rem;
+  text-transform: capitalize;
+  text-justify: newspaper;
+}
+
+section.hero .hero_left h1 span {
+  color: #feca57;
+}
+
+section.hero .hero_right {
+  height: 50rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+section.hero .hero_right .carousel-inner {
+  height: 35rem;
+}
+
+section.hero .hero_right .carousel-inner img {
+  height: 35rem;
+}
+
+section.hero .hero_right .about-image figure {
+  height: 45rem;
+}
+
+section.hero .hero_right .about-image figure img {
+  height: 100%;
+  -webkit-filter: drop-shadow(0 0.5rem 1rem rgba(0, 0, 0, 0.5));
+          filter: drop-shadow(0 0.5rem 1rem rgba(0, 0, 0, 0.5));
+}
+
+section.hero .hero_right .error-image figure {
+  height: 35rem;
+}
+
+section.hero .hero_right .error-image figure img {
+  height: 100%;
+  -webkit-filter: drop-shadow(0 0.5rem 1rem rgba(0, 0, 0, 0.5));
+          filter: drop-shadow(0 0.5rem 1rem rgba(0, 0, 0, 0.5));
+}
+
+section.hero button {
+  font-size: 2rem;
+  outline: none;
+  padding: 0.3rem 0.8rem;
+  border: #feca57 solid 0.2rem;
+  background: none;
+  color: #111;
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+}
+
+section.hero button:hover {
+  color: #3867d6;
+}
+
+section.hero button:before {
+  content: "";
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  border-radius: 0 50% 50% 0;
+  background-color: #feca57;
+  z-index: -1;
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+}
+
+section.hero button:hover::before {
+  width: 180%;
+}
+
+@media (max-width: 768px) {
+  .hero_left {
+    height: auto;
+    margin-top: 2rem;
+  }
+  .hero_right {
+    height: auto;
+    margin-top: 2rem;
+  }
+}
+
+.tempInformation .input-div .temp-form {
+  position: relative;
+  width: 80%;
+  margin: 5rem auto;
+}
+
+.tempInformation .input-div .temp-form input[type="text"] {
+  width: 100%;
+  font-size: 1.7rem;
+  padding: 2rem 5rem 2rem 2rem;
+  outline: none;
+  color: #fff;
+  background-color: #1e202b;
+  border: none;
+  border-radius: 3rem;
+}
+
+.tempInformation .input-div .temp-form ::-webkit-input-placeholder {
+  color: whitesmoke;
+}
+
+.tempInformation .input-div .temp-form :-ms-input-placeholder {
+  color: whitesmoke;
+}
+
+.tempInformation .input-div .temp-form ::-ms-input-placeholder {
+  color: whitesmoke;
+}
+
+.tempInformation .input-div .temp-form ::placeholder {
+  color: whitesmoke;
+}
+
+.tempInformation .input-div .temp-form input[type="submit"] {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  bottom: 5px;
+  border: none;
+  background: #009ad8;
+  padding: 0 3rem;
+  color: whitesmoke;
+  font-size: 1.5rem;
+  border-radius: 3rem;
+  outline: none;
+}
+
+.tempInformation .output-div {
+  width: 60%;
+  margin: 0 auto 5rem;
+  min-height: 30rem;
+  background-color: #323544;
+  border-radius: 1rem;
+}
+
+.tempInformation .output-div .top-layer {
+  width: 100%;
+  height: 20%;
+  background-color: #2d303d;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 1rem;
+}
+
+.tempInformation .output-div .top-layer p {
+  color: white;
+  font-size: 1.6rem;
+  padding: 1.7rem;
+  font-weight: 300;
+}
+
+.tempInformation .output-div .main-layer {
+  width: 100%;
+  height: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 2rem;
+}
+
+.tempInformation .output-div .main-layer #getOutput {
+  color: #fff;
+  font-size: 1.8rem;
+  padding: 2rem 0;
+}
+
+.tempInformation .output-div .main-layer .middle-layer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  color: #fff;
+}
+
+.tempInformation .output-div .main-layer .middle-layer p,
+.tempInformation .output-div .main-layer .middle-layer .fa {
+  font-size: 5rem;
+  font-weight: 700;
+}
+
+.tempInformation .output-div .main-layer .data-hide {
+  visibility: hidden;
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+}
+
+@media (max-width: 768px) {
+  .tempInformation .output-div {
+    width: 80%;
+  }
+}
+
+footer {
+  height: 5rem;
+  background-color: #182c61;
+  margin-top: auto;
+  color: #fff;
+  text-align: center;
+}
+
+footer p {
+  line-height: 5rem;
+  font-size: 2rem;
+  margin: 0;
+}
+
+footer p a {
+  text-decoration: none;
+  color: #fff;
+}
+
+@media screen and (max-width: 720px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  html {
+    font-size: 40%;
+  }
+}
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,338 @@
+@import url("https://fonts.googleapis.com/css2?family=Piazzolla:wght@300;400&display=swap");
+// Default CSS
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Piazzolla", serif;
+}
+:root {
+  --main-bg: #dff9fb;
+  --main-color: #130f40;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.row {
+  margin: 0;
+}
+// #############################
+// Header NAV
+// #############################
+header.nav-menu {
+  background-color: var(--main-color);
+  font-size: 1.6rem;
+  color: #fff;
+
+  nav {
+    background-color: var(--main-color);
+    padding: 2rem 0rem;
+
+    li {
+      margin-left: 1rem;
+      a {
+        color: #fff;
+        transition: 0.5s;
+      }
+
+      a:hover {
+        color: #f9ca24;
+      }
+    }
+
+    .navbar-brand {
+      font-size: 2.3rem;
+      transition: all linear;
+      color: white;
+      animation: colr 5s linear infinite;
+
+      @keyframes colr {
+        0% {
+          color: yellow;
+        }
+        25% {
+          color: red;
+        }
+        50% {
+          color: rgb(180, 180, 180);
+        }
+        75% {
+          color: rgb(104, 231, 104);
+        }
+        100% {
+          color: #e056fd;
+        }
+      }
+      .fa-snowflake {
+        transition: all linear;
+        animation: rotate 2s linear infinite;
+        color: #c7ecee;
+      }
+
+      @keyframes rotate {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    }
+  }
+}
+.navbar-toggler-icons {
+  font-size: 2rem;
+  color: #fff;
+}
+
+// ##############################
+// HERO SECTION
+// ##############################
+section.hero {
+  .hero_left {
+    height: 50rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+
+    p {
+      font-size: 2rem;
+    }
+
+    h1 {
+      font-size: 4rem;
+      margin: 0rem 0rem 4rem;
+      text-transform: capitalize;
+      // text-align: start;
+      text-justify: newspaper;
+
+      span {
+        color: #feca57;
+      }
+    }
+  }
+
+  .hero_right {
+    height: 50rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .carousel-inner {
+      height: 35rem;
+      img {
+        height: 35rem;
+      }
+    }
+    .about-image figure {
+      height: 45rem;
+
+      img {
+        height: 100%;
+        filter: drop-shadow(0 0.5rem 1rem rgba(0, 0, 0, 0.5));
+      }
+    }
+
+    .error-image figure {
+      height: 35rem;
+
+      img {
+        height: 100%;
+        filter: drop-shadow(0 0.5rem 1rem rgba(0, 0, 0, 0.5));
+      }
+    }
+  }
+
+  button {
+    font-size: 2rem;
+    outline: none;
+    padding: 0.3rem 0.8rem;
+    border: #feca57 solid 0.2rem;
+    background: none;
+    color: #111;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s linear;
+  }
+  button:hover {
+    color: #3867d6;
+  }
+  button:before {
+    content: "";
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    border-radius: 0 50% 50% 0;
+    background-color: #feca57;
+    z-index: -1;
+    transition: all 0.5s linear;
+  }
+
+  button:hover::before {
+    width: 180%;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero_left {
+    height: auto;
+    margin-top: 2rem;
+  }
+
+  .hero_right {
+    height: auto;
+    margin-top: 2rem;
+  }
+}
+
+// Weather Page
+
+.tempInformation .input-div {
+  .temp-form {
+    position: relative;
+    width: 80%;
+    margin: 5rem auto;
+
+    input[type="text"] {
+      width: 100%;
+      font-size: 1.7rem;
+      padding: 2rem 5rem 2rem 2rem;
+      outline: none;
+      color: #fff;
+      background-color: #1e202b;
+      border: none;
+      border-radius: 3rem;
+    }
+
+    ::placeholder {
+      color: whitesmoke;
+    }
+
+    input[type="submit"] {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      bottom: 5px;
+      border: none;
+      background: #009ad8;
+      padding: 0 3rem;
+      color: whitesmoke;
+      font-size: 1.5rem;
+      border-radius: 3rem;
+      outline: none;
+    }
+  }
+}
+
+.tempInformation .output-div {
+  width: 60%;
+  margin: 0 auto 5rem;
+  min-height: 30rem;
+  background-color: #323544;
+  // padding: 1rem;
+  border-radius: 1rem;
+
+  .top-layer {
+    width: 100%;
+    height: 20%;
+    background-color: #2d303d;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 1rem;
+
+    p {
+      color: white;
+      font-size: 1.6rem;
+      padding: 1.7rem;
+      font-weight: 300;
+    }
+  }
+
+  .main-layer {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+
+    #getOutput {
+      color: #fff;
+      font-size: 1.8rem;
+      padding: 2rem 0;
+    }
+
+    .middle-layer {
+      display: flex;
+      justify-content: space-around;
+      color: #fff;
+
+      p,
+      .fa {
+        font-size: 5rem;
+        font-weight: 700;
+      }
+    }
+
+    .data-hide {
+      visibility: hidden;
+      transition: all 0.5s linear;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .tempInformation .output-div {
+    width: 80%;
+  }
+}
+
+// ##############################
+// FOOTER
+// ##############################
+footer {
+  height: 5rem;
+  background-color: #182c61;
+  margin-top: auto;
+  color: #fff;
+  text-align: center;
+
+  p {
+    line-height: 5rem;
+    font-size: 2rem;
+    margin: 0;
+
+    a {
+      text-decoration: none;
+      color: #fff;
+    }
+  }
+}
+
+// Media Screen
+@media screen and (max-width: 720px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  html {
+    font-size: 40%;
+  }
+}
